@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Super</title>
+    <title>Bootstrap Example</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -29,10 +29,10 @@
                     <a class="nav-link" href="/saebbing">상품등록</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown">도우미</a>
+                    <a class="nav-link dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown">분류</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="/food">오시는 길</a></li>
-                        <li><a class="dropdown-item" href="/tool">사회활동</a></li>
+                        <li><a class="dropdown-item" href="/food">포드코드</a></li>
+                        <li><a class="dropdown-item" href="/tool">생필품</a></li>
                         <li><a class="dropdown-item" href="/customer">고객센터</a></li>
                     </ul>
                 </li>
@@ -42,8 +42,36 @@
 </nav>
 
 <div class="container-fluid mt-3">
-    <h3>슈퍼다</h3>
-    <p>돈 많이써라 흑우들아</p>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>상품번호</th>
+            <th>상품명</th>
+            <th>상품가격</th>
+            <th>상품재고</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1</th>
+                <th>커피</th>
+                <th>1500</th>
+                <th>2000</th>
+            </tr>
+            <tr>
+                <th>2</th>
+                <th>망치</th>
+                <th>3000</th>
+                <th>150</th>
+            </tr>
+            <tr>
+                <th>3</th>
+                <th>핸드크림</th>
+                <th>6000</th>
+                <th>55</th>
+            </tr>
+        </tbody>
+    </table>
 </div>
 
 </body>

@@ -2,6 +2,7 @@ package com.mtcoding.test01.model;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
@@ -13,6 +14,7 @@ public class SuperRepository {
     @Autowired
     private EntityManager em;
 
+    @Transactional
     public void save(String name, int price, int qty){
         Query query = em.createNativeQuery("insert into super_tb(name, price, qty) values (:name, :price, :qty)");
         query.setParameter("name", name);
@@ -25,4 +27,6 @@ public class SuperRepository {
         List<Super> superList = query.getResultList();
         return superList;
     }
+
+
 }

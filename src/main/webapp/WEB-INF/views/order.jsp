@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Super</title>
+    <title>Bootstrap Example</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -13,7 +13,7 @@
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/">Super</a>
+        <a class="navbar-brand" href="#">Super</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -29,10 +29,10 @@
                     <a class="nav-link" href="/saebbing">상품등록</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown">도우미</a>
+                    <a class="nav-link dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown">분류</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="/food">오시는 길</a></li>
-                        <li><a class="dropdown-item" href="/tool">사회활동</a></li>
+                        <li><a class="dropdown-item" href="/food">포드코드</a></li>
+                        <li><a class="dropdown-item" href="/tool">생필품</a></li>
                         <li><a class="dropdown-item" href="/customer">고객센터</a></li>
                     </ul>
                 </li>
@@ -40,10 +40,16 @@
         </div>
     </div>
 </nav>
-
-<div class="container-fluid mt-3">
-    <h3>슈퍼다</h3>
-    <p>돈 많이써라 흑우들아</p>
+<div class="container mt-3">
+    <form action="/saebbing"method="post" enctype="application/x-www-form-urlencoded">
+        <div class="mb-3 mt-3">
+            <input type="text" class="form-control" placeholder="Enter 상품명" name="name">
+        </div>
+        <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Enter 주문개수" name="price">
+        </div>
+        <button type="submit" class="btn btn-primary">상품주문</button>
+    </form>
 </div>
 
 </body>
